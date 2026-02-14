@@ -1,3 +1,3 @@
-print("Hello NSU")
+print("Hello NSU!!!")
 
 print("HI")
