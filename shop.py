@@ -45,6 +45,33 @@ class PhysicalProduct(Product):
         return super().total_price + self.shipping_cost
 
 
+class Cart():
+    def __init__(self):
+        self.basket = dict()
+
+    def add(self, product: Product, count = 1):
+        self.basket[product] = self.basket.get(product, 0) + count
+        
+    def remove(self, name: int = 1):
+        for product in self.basket.keys:
+            if product.name == name:
+                if self.basket[product] == 0:
+                    self.basket.pop(product)
+                    return
+                self.basket[product] -= 1
+                return
+        raise Exception("Товара нет в корзине")
+    
+    @property
+    def total(self):
+        cost = 0
+        for product, count in self.basket.items():
+            cost += product.total_price * count
+
+        return cost
+
+
+
 mouse = PhysicalProduct('mouse', 500, 10, 100)
 print(mouse)
 print(f"mouse total price: {mouse.total_price}")
@@ -52,3 +79,7 @@ print(f"mouse total price: {mouse.total_price}")
 game = DigitalProduct("Minecraft", 150, 0, 15555)
 print(game, game.download_info())
 
+cart = Cart()
+cart.add(game, 2)
+cart.add(mouse)
+print(f"total price: {cart.total}")
