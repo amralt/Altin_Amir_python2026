@@ -48,7 +48,6 @@ if __name__ == '__main__':
     )
     args = parser.parse_args()
     path = args.project_dir
-    # path = "/home/amir/Общедоступные/programming/nsu/python/git/Altin_Amir_python2026/tests"
 
     if not os.path.isdir(path):
         raise Exception(f"Error: {path} is not a valid directory.")
