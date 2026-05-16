@@ -12,6 +12,7 @@ def get_df_by_hw_name(hw_name: str) -> pd.DataFrame:
     else:
         raise ValueError(f"Unknown homework name: {hw_name}")
 
+
 def get_names() -> list[str]:
     names_1 = hw_01_df['Unnamed: 0'].tolist()
     names_2 = hw_02_df['Unnamed: 0'].tolist()

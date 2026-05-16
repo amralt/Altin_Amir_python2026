@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request, render_template
 import parser
 
-import typing
 
 app = Flask(__name__, template_folder='template')
 
