@@ -1,0 +1,15 @@
+http://127.0.0.1:8008/names
+
+http://127.0.0.1:8008/hw-01/mean_score
+
+http://127.0.0.1:8008/hw-01/24144/mean_score
+
+http://127.0.0.1:8008/mean_score?group_id=24144&hw_name=hw-01
+
+http://127.0.0.1:8008/mark?student_name=Ведерников Антон
+
+http://127.0.0.1:8008/mark?group_id=24144
+
+http://127.0.0.1:8008/course_table?group_id=25137&hw_name=hw-01
+
+http://127.0.0.1:8008/course_table?hw_name=hw-01
